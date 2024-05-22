@@ -3,7 +3,7 @@ interface Usuario {
   sobrenome: string;
   idade: number;
 }
-
+// Criando usuário
 const usuario: Usuario = {
   nome: "Nicole",
   sobrenome: "Serafim",
