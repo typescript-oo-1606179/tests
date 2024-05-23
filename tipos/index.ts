@@ -20,7 +20,7 @@ console.log("boolean");
 console.log("===========================================");
 const boleano: boolean = texto === "Fulano";
 
-console.log(typeof boleano);
+console.log(typeof boleano); // false
 
 console.log(texto === "Fulano");
 
@@ -30,7 +30,21 @@ console.log("null");
 console.log("===========================================");
 const nulo: null = null;
 
-console.log(typeof nulo);
+console.log(typeof nulo); // object
+
+const usuario = {
+  nome: "Fulano",
+  idade: null,
+};
+
+console.log(usuario.idade); // null
+
+if (usuario.idade) {
+  console.log("O usuário possui idade");
+} else {
+  // Vai cair nesse bloco
+  console.log("Você precisa inserir uma idade");
+}
 
 // undefined
 console.log("===========================================");
@@ -38,30 +52,20 @@ console.log("undefined");
 console.log("===========================================");
 const indefinido: undefined = undefined;
 
-console.log(indefinido);
-
-const usuario = {
-  nome: "Fulano",
-  idade: null,
-};
-
-console.log(usuario.idade);
-
-if (usuario.idade) {
-  console.log("O usuário possui idade");
-} else {
-  console.log("Você precisa inserir uma idade");
-}
+console.log(indefinido); // undefined
+console.log(typeof indefinido); // object
 
 // Array
 console.log("===========================================");
 console.log("Array");
 console.log("===========================================");
-const lista: number[] = [1, 2, 3, 4, 5, 6, 7];
+const lista: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-const lista2: Array<string> = ["1", "2", "3", "4"];
+const lista2: Array<string> = ["1", "2", "3", "4", "5"];
 
 const lista3: ["Fabiana", boolean, number] = ["Fabiana", true, 123123];
+
+const tupla: [string, boolean] = ["Lucas", true];
 
 console.log(typeof lista);
 
