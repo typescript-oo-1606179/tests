@@ -57,7 +57,7 @@ console.log(formatDate());
 
 //   // return param ? param : "Bloco falso";
 
-//   return param || "Bloco falso";
+//   // return param || "Bloco falso";
 // }
 
 // console.log(compara());

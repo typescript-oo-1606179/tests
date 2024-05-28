@@ -19,6 +19,7 @@ const listaDeCompras = ["Tomate", "Feijão", "Arroz"];
 console.log("🚀 ~ listaDeCompras:", listaDeCompras);
 
 function obterPrimeiroItemDaLista(lista: Array<string>) {
+  // lista =  [string, string, string, ...]
   const primeiroItem = lista[0];
 
   return primeiroItem;

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start-heranca": "ts-node-dev --respawn heranca.ts",
+    "start-encapsulamento": "ts-node-dev --respawn encapsulamento.ts",
+    "start-polimorfismo": "ts-node-dev --respawn polimorfismo.ts"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0"
+  }
+}
