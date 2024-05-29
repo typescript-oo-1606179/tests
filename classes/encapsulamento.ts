@@ -51,6 +51,8 @@ const user = new User("Luciel", "Santos", 58, "12346789123");
 
 console.log("🚀 ~ user:", user);
 
+console.log("🚀 ~ user.name:", user.name);
+
 console.log("🚀 ~ getFullName:", user.getFullName());
 
 console.log("🚀 ~ getCpf:", user.getCpf());

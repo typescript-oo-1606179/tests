@@ -89,6 +89,6 @@ dog.barks();
 
 dog.showLength();
 
-dog.changeLength(150);
+dog.changeLength(70);
 
 dog.showLength();

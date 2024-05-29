@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node-dev --respawn types.ts"
+    "start": "ts-node-dev --respawn types.ts",
+    "start-enum": "ts-node-dev --respawn enum.ts"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0"
