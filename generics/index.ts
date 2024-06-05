@@ -14,22 +14,47 @@ console.log("🚀 ~ list:", list);
 // };
 // console.log("🚀 ~ product:", product);
 
-interface Price {
-  value: number;
+interface Price<TValue extends string | number> {
+  value: TValue;
   discount: number;
 }
 
-interface Product<TPrice extends string | number | Price = number> {
+interface Product<
+  TPrice extends string | number | Price<string | number> = number
+> {
   name: string;
   price: TPrice;
+  manufacturer?: string;
+  getPrice?(): TPrice;
 }
 
 const product: Product<number> = {
   name: "Teclado",
+  // manufacturer: "Logitech",
   price: 587,
+  getPrice: function () {
+    return 587;
+  },
 };
 
 console.log("🚀 ~ product:", product);
+
+// if (product.getPrice) {
+//   console.log("🚀 ~ product.getPrice:", product.getPrice());
+// }
+
+// product.getPrice && console.log("🚀 ~ product.getPrice:", product.getPrice());
+
+console.log("🚀 ~ product.getPrice:", product.getPrice?.());
+
+// if (product.manufacturer) {
+//   console.log("🚀 ~ product.manufacturer:", product.manufacturer.toUpperCase());
+// }
+
+// product.manufacturer &&
+//   console.log("🚀 ~ product.manufacturer:", product.manufacturer.toUpperCase());
+
+console.log("🚀 ~ product.manufacturer:", product.manufacturer?.toUpperCase());
 
 const product2: Product<string> = {
   name: "Teclado",
@@ -38,7 +63,7 @@ const product2: Product<string> = {
 
 console.log("🚀 ~ product:", product2);
 
-const produto3: Product<Price> = {
+const produto3: Product<Price<number>> = {
   name: "Garrafa",
   price: {
     value: 456,
